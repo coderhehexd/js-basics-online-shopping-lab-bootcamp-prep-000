@@ -62,7 +62,7 @@ function removeFromCart(item) {
   if(!present){
     return "That item is not in your cart."
   }else{
-    cart = [...cart.splice(0,position), ...cart.splice(position+1)]
+    cart = [...cart.splice(0,position), ...cart.splice(position)]
   }
 }
 
@@ -80,8 +80,8 @@ function placeOrder(cardNumber) {
 }
 
 addToCart("vanilla");
-    addToCart("watermelon");
-    addToCart("yams");
+addToCart("watermelon");
+addToCart("yams");
 
-    removeFromCart("watermelon");
+removeFromCart("watermelon");
 console.log(cart)
